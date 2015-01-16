@@ -1,3 +1,4 @@
+#include<iostream>
 #include<string>
 
 using namespace std;
@@ -11,4 +12,17 @@ bool unique(const string &s){
     else
       arr[unsigned(c)]=true;
   return true;
+}
+
+void testCase(string s){
+  cout<<boolalpha;
+  cout<<"Given string:\t"<<s<<endl;
+  cout<<unique(s)<<endl;
+}
+
+int main(){
+  testCase("hello");
+  testCase("");
+  testCase("a");
+  testCase("abcd");
 }
