@@ -8,7 +8,7 @@ Brain Teaser Problems
 6-2
 ---
 No.
-paint two colors on the chess board, each domino has to cover two different colors. The removed two corners have the same color.
+paint two colors on the chess board so that adjacent cell has different colors. Then each domino has to cover two different colors. But the removed two corners have the same color.
 
 6-3
 ---
