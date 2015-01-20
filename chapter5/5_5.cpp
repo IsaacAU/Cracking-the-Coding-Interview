@@ -4,13 +4,12 @@
 using namespace std;
 
 int convert(int A, int B){
-  int res=A^B, n=0;
-  while(res){
-    if(res%2)
-      ++n;
-    res/=2;
+  int nor=A^B, res=0;
+  while(nor){
+    nor&=(nor-1);
+    ++res;
   }
-  return n;
+  return res;
 }
 
 int main(){
