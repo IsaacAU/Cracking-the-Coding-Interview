@@ -1,40 +1,8 @@
 #include<iostream>
 #include<vector>
+#include"BTree.h
 
 using namespace std;
-
-struct TreeNode{
-  int val;
-  TreeNode *left, *right;
-  TreeNode(int x):val(x), left(nullptr), right(nullptr){}
-};
-
-TreeNode *build(vector<int> &v, int &i){
-  if(i==v.size()) return nullptr;
-  if(v[i]==-1){
-    ++i;
-    return nullptr;
-  }
-  TreeNode *root=new TreeNode(v[i++]);
-  root->left=build(v, i);
-  root->right=build(v, i);
-  return root;
-}
-
-void remove(TreeNode *root){
-  if(root==nullptr) return;
-  remove(root->left);
-  remove(root->right);
-  delete root;
-  root=nullptr;
-}
-
-void display(TreeNode *root){
-  if(root==nullptr) return;
-  display(root->left);
-  cout<<root->val<<" ";
-  display(root->right);
-}
 
 TreeNode *commonAncestor(TreeNode *root, TreeNode *nd1, TreeNode *nd2){
   if(root==nullptr || nd1==nullptr || nd2==nullptr) return nullptr;
