@@ -34,6 +34,23 @@ If c=2, each man with hat sees one hat and thought they don't have hat until afe
 ---
 
 
+6-6
+---
+The 100 locks are indexed as 1, 2, 3, ..., 100.
+
+<pre><code>
+bool getStatus(int i){   // lock is true
+  int num=0;
+  for(int x=2; x<=i/2; ++x){
+    if(i%x==0)
+      ++num;
+  }
+  return num%2;
+}
+</code></pre>
+
+
+
 
 
 
