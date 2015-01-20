@@ -3,6 +3,7 @@
 
 using namespace std;
 
+// method 1
 int missing(int A[], int n){
   int res=0;
   for(int i=1; i<=n; ++i)
